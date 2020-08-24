@@ -11,9 +11,8 @@ function init() {
                 .property("value", sample);
     });
 })}
-
+ 
 init();
-
 
 function optionChanged(newSample) {
     buildMetadata(newSample);
@@ -25,7 +24,7 @@ function buildMetadata(sample) {
         var metadata = data.metadata;
         var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
         var result = resultArray[0];
-        var PANEL = d3.select("#sample-metadata").val(940);
+        var PANEL = d3.select("#sample-metadata");
 
         PANEL.html("");
         PANEL.append("h6").text('ID: ' + result.id);
